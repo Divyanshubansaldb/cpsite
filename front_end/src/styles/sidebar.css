@@ -1,0 +1,22 @@
+.form-inline {
+  width: 100%;
+}
+
+.form-group {
+  width: 90%;
+}
+
+.input-group {
+  width: 90% !important;
+}
+
+/* .btn {
+ margin-left: 0%; 
+} */
+.fform-control {
+  width: 30% !important;
+}
+
+span.input-group-addon {
+  width: 50px !important;
+}
