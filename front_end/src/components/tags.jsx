@@ -4,21 +4,27 @@ import { Multiselect } from "multiselect-react-dropdown";
 class tags extends Component {
   state = {
     options: [
-      { name: "Srigar", id: 1 },
-      { name: "Sam", id: 2 },
-      { name: "Sam", id: 3 },
-      { name: "Sam", id: 4 },
+      // "ram",
+      // "shyam",
+      // "divyanshu",
+      // "pooja",
+      { name: "ram" },
+      { name: "shyam" },
     ],
   };
+
   render() {
     return (
-      <Multiselect
-        options={this.state.options} // Options to display in the dropdown
-        selectedValues={this.state.selectedValue} // Preselected value to persist in dropdown
-        onSelect={this.onSelect} // Function will trigger on select event
-        onRemove={this.onRemove} // Function will trigger on remove event
-        displayValue="name" // Property name to display in the dropdown options
-      />
+      <div className="btn my-3">
+        <Multiselect
+          placeholder={this.props.placeholder}
+          options={this.props.options} // Options to display in the dropdown
+          selectedValues={this.state.selectedValue} // Preselected value to persist in dropdown
+          onSelect={this.onSelect} // Function will trigger on select event
+          onRemove={this.onRemove} // Function will trigger on remove event
+          displayValue="name" // Property name to display in the dropdown options
+        />
+      </div>
     );
   }
 }
