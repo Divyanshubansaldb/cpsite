@@ -39,27 +39,14 @@ class sidebar extends Component {
   render() {
     return (
       <div className="fform-control">
-        <input
-          className="form-control my-sm-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button
-          className="btn btn-outline-success my-sm-2 float-right"
-          style={{ marginRight: "40%" }}
-          type="submit"
-        >
-          Search
-        </button>
-
         {this.state.tagName.map((tag) => {
           return (
             <Tags
               key={tag}
               placeholder={tag}
-              key={tag}
-              options={
+              addingtag={this.props.onadd}
+              removingtag={this.props.onremove}
+              title={
                 this.state.loading
                   ? [{ name: "loading...." }]
                   : this.matchingnames(tag)

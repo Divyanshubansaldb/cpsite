@@ -16,6 +16,8 @@ require __DIR__ . './vendor/autoload.php';
 $app = new \Slim\app;
 
 require_once __DIR__ . './routes/tags.php';
+require_once __DIR__ . './routes/problems.php';
+
 $app->get('/problem', function (Request $request, Response $response, array $args) {
     require __DIR__ . "./config/variables.php";
 

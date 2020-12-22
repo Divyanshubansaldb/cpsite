@@ -28,17 +28,17 @@ $app->get('/tags', function (Request $request, Response $response, array $args) 
     require __DIR__ . "./../config/variables.php";
 
     $tagslist = new listsample();
-    $tagslist->adding_Difficulty('Beginner');
-    $tagslist->adding_Difficulty('Easy');
-    $tagslist->adding_Difficulty('Medium');
-    $tagslist->adding_Difficulty('Hard');
-    $tagslist->adding_Difficulty('Challenge');
+    $tagslist->adding_Difficulty('beginner');
+    $tagslist->adding_Difficulty('easy');
+    $tagslist->adding_Difficulty('medium');
+    $tagslist->adding_Difficulty('hard');
+    $tagslist->adding_Difficulty('challenge');
 
     $token = (new get_token())->ispresent($config); // getting token
-    $path = $config['api_endpoint'] . "tags/problems?limit=100";
+    $path = $config['api_endpoint'] . "tags/problems?limit=100&offset=";
 
     for ($times = 0; $times < 2; $times++) {
-        $codechefResponse = json_decode(make_api_request($token, $path));
+        $codechefResponse = json_decode(make_api_request($token, $path . strval($times * 100)));
         foreach ($codechefResponse->result->data->content as $key => $value) {
             if ($value->type === "author") $tagslist->adding_Author($key);
             if ($value->type === "actual_tag") $tagslist->adding_Concepts($key);

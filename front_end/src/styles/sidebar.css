@@ -13,9 +13,10 @@
 /* .btn {
  margin-left: 0%; 
 } */
-.fform-control {
-  width: 20% !important;
-}
+/* .fform-control {
+  width: 100% !important;
+  display: inline-block;
+} */
 
 span.input-group-addon {
   width: 50px !important;

@@ -3,10 +3,10 @@ class db
 {
     //properties
 
-    private $dbhost = "localhost";
-    private $dbuser = "root";
-    private $dbpass = "";
-    private $dbname = "test";
+    private $dbhost = "b8r4pl1i8l3ypxjl6z94-mysql.services.clever-cloud.com";
+    private $dbuser = "ujsgtzlx75vcs3nk";
+    private $dbpass = "dHW9r74QNbyjZfQU1EZo";
+    private $dbname = "b8r4pl1i8l3ypxjl6z94";
 
     //connect
     public function connect()
