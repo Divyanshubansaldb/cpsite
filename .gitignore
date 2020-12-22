@@ -1,2 +1,2 @@
-backend/vendor/
-front_end/node_modules/
+public/vendor/
+node_modules/
