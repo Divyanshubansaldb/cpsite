@@ -1,4 +1,9 @@
 {
+    "scripts": {
+        "build":"cd frontend && npm run build",
+        "install-client":"cd client && npm install",
+        "heroku-postbuild":"npm run install-client && npm run build"
+    },
     "require": {
         "slim/slim": "^3.0"
     }
