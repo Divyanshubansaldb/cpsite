@@ -6,14 +6,14 @@ require_once __DIR__ . './middleware/generate_token_refresh.php';
 require_once __DIR__ . './middleware/api_request.php';
 require_once __DIR__ . './middleware/validating_and_requesting_access_token.php';
 require_once __DIR__ . './routes/getting_problems.php';
+require __DIR__ . './vendor/autoload.php';
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 // use Slim\Factory\AppFactory;
 
-require __DIR__ . './vendor/autoload.php';
 // $app = AppFactory::create();
-$app = new \Slim\app;
+$app = new \Slim\App();
 
 require_once __DIR__ . './routes/tags.php';
 require_once __DIR__ . './routes/problems.php';
@@ -55,11 +55,9 @@ $app->get('/user', function (Request $request, Response $response, array $args) 
 });
 
 $app->get('/', function (Request $request, Response $response, array $args) {
+    echo __DIR__;
     $response->getBody()->write("Hello, divyanshu");
     return $response;
 });
-//customer routes
-
-// require '../src/routes/customers.php';
 
 $app->run();
