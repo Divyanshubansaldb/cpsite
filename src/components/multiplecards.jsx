@@ -9,7 +9,7 @@ class multicard extends Component {
   };
 
   fetchingproblems = () => {
-    const url = "/problems";
+    const url = "https://cpsitebackend.herokuapp.com/problems";
     fetch(url, {
       method: "POST",
       mode: "cors",

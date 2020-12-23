@@ -10,7 +10,7 @@ class sidebar extends Component {
   };
 
   componentDidMount() {
-    const url = "/tags";
+    const url = "https://cpsitebackend.herokuapp.com/tags";
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.settingthedata(data))
