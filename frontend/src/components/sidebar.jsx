@@ -10,7 +10,7 @@ class sidebar extends Component {
   };
 
   componentDidMount() {
-    const url = "http://cpsite/backend/tags";
+    const url = "/tags";
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.settingthedata(data))

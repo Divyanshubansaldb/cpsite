@@ -9,7 +9,7 @@ class multicard extends Component {
   };
 
   fetchingproblems = () => {
-    const url = "http://localhost:3000/problems";
+    const url = "/problems";
     fetch(url, {
       method: "POST",
       mode: "cors",
