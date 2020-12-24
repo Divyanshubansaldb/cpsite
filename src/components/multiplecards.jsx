@@ -10,7 +10,7 @@ class multicard extends Component {
 
   fetchingproblems = () => {
     const url =
-      "https://cors-anywhere.herokuapp.com/https://cpsitebackend.herokuapp.com/problems";
+      "https://thingproxy.freeboard.io/fetch/https://cpsitebackend.herokuapp.com/problems";
     fetch(url, {
       method: "POST",
       mode: "cors",

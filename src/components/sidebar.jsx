@@ -43,6 +43,7 @@ class sidebar extends Component {
           return (
             <Tags
               key={tag}
+              id={tag}
               placeholder={tag}
               addingtag={this.props.onadd}
               removingtag={this.props.onremove}
