@@ -55,7 +55,10 @@ $app->get('/user', function (Request $request, Response $response, array $args) 
 });
 
 $app->get('/', function (Request $request, Response $response, array $args) {
-    echo __DIR__;
+    echo PHP_SAPI;
+    $url  = parse_url($_SERVER['REQUEST_URI']);
+    $file = __DIR__ . $url['path'];
+    echo $file;
     $response->getBody()->write("Hello, divyanshu");
     return $response;
 });
