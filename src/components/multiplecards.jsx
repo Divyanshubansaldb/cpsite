@@ -19,7 +19,7 @@ class multicard extends Component {
       headers: {
         "Content-type": "application/json",
         Accept: "application/json",
-        // "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((response) => response.json())
