@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://cpsitebackend.herokuapp.com"
+  "proxy": "https://localhost:8080"
 }

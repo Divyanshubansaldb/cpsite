@@ -19,7 +19,7 @@ class multicard extends Component {
       headers: {
         "Content-type": "application/json",
         Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
+        // "Access-Control-Allow-Origin": "*",
       },
     })
       .then((response) => response.json())
@@ -49,7 +49,7 @@ class multicard extends Component {
           this.state.data.map((problem) => {
             return (
               <div className="col-4 my-3 " key={problem.code}>
-                <Customcard problem={problem} />
+                <Customcard problem={problem} key={problem.code} />
               </div>
             );
           })
