@@ -56,6 +56,7 @@ class multicard extends Component {
   // }
 
   render() {
+    console.log("render");
     return (
       <React.Fragment>
         {this.state.loading ? (
