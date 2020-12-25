@@ -6,11 +6,13 @@ class multicard extends Component {
   state = {
     data: [],
     loading: true,
+    tags: [],
   };
 
   fetchingproblems = () => {
     const url =
       "https://cors-anywhere.herokuapp.com/https://cpsitebackend.herokuapp.com/problems";
+    // console.log("fetching function called");
     fetch(url, {
       method: "POST",
       mode: "cors",
@@ -24,7 +26,11 @@ class multicard extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ data, loading: false });
+        this.setState({
+          data,
+          loading: false,
+          // tags: this.props.tags,
+        });
       })
       .catch((e) => {
         console.error("this was an error");
@@ -36,9 +42,18 @@ class multicard extends Component {
     this.fetchingproblems();
   }
 
-  componentDidUpdate() {
-    this.fetchingproblems();
-  }
+  // componentDidUpdate(previousProp, previousState) {
+  //   // console.log(previousProp.tags + "/n");
+  //   // console.log(previousState.tags);
+  //   // console.log(this.state.tags);
+  //   // console.log(this.props.tags);
+  //   // console.log(this);
+  //   // console.log("class tags" + this.tags);
+  //   // console.log("props.tags" + this.props.tags);
+  //   // if (this.tags !== this.props.tags) {
+  //   //   this.fetchingproblems();
+  //   // }
+  // }
 
   render() {
     return (

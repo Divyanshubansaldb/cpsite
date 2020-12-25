@@ -45,7 +45,10 @@ class App extends Component {
                   <div className="container" style={{ Width: "70%" }}>
                     <div className="row">
                       {this.state.selected ? (
-                        <Multicard tags={this.state.tags} />
+                        <Multicard
+                          tags={this.state.tags}
+                          key={this.state.tags}
+                        />
                       ) : (
                         <Card body>Please Select Any tag</Card>
                       )}
