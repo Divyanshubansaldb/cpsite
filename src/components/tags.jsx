@@ -14,6 +14,7 @@ class tags extends Component {
     return (
       <div className="btn my-3">
         <Multiselect
+          id={this.props.placeholder}
           placeholder={this.props.placeholder}
           options={this.props.title} // Options to display in the dropdown
           selectedValues={true} // Preselected value to persist in dropdown

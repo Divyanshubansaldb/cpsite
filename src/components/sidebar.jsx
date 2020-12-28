@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Tags from "./tags";
-import style from "./../styles/sidebar.css";
+// import style from "./../styles/sidebar.css";
 
 class sidebar extends Component {
   state = {
@@ -36,6 +36,7 @@ class sidebar extends Component {
     else if (str === "Concepts") return this.state.options.Concepts;
     else return this.state.options.Author;
   }
+
   render() {
     return (
       <div className="fform-control">
@@ -43,7 +44,6 @@ class sidebar extends Component {
           return (
             <Tags
               key={tag}
-              id={tag}
               placeholder={tag}
               addingtag={this.props.onadd}
               removingtag={this.props.onremove}
