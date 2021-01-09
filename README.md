@@ -8,4 +8,4 @@ Frontend is made on JavaScript using React.js
 Deployed at: _https://cpsite.herokuapp.com/_
 
 Screenshots of the website
-![PNG](screenshot.png)
+![PNG](Screenshot.png)
